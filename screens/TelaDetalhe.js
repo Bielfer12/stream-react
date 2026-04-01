@@ -3,16 +3,13 @@ import { View, StyleSheet, ScrollView, Image } from 'react-native';
 import { Title, Paragraph, Text, Divider, Chip } from 'react-native-paper';
 import { LinearGradient } from 'expo-linear-gradient';
 
-export default function TelaDetalhe({ route, navigation }) {
+export default function TelaDetalhe({ route }) {
 
   const { filme } = route.params;
 
   return (
     <ScrollView style={estilos.container}>
 
-      {
-        
-      }
       <LinearGradient
         colors={['#1565C0', '#B71C1C']}
         start={{ x: 0, y: 0 }}
@@ -75,7 +72,6 @@ const estilos = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     textAlign: 'center',
-    letterSpacing: 1,
   },
   poster: {
     width: '100%',

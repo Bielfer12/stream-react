@@ -28,7 +28,6 @@ export default function TelaFilmes({ navigation }) {
       <TouchableOpacity
         style={estilos.card}
         onPress={() => navigation.navigate('TelaDetalhe', { filme: item })}
-        activeOpacity={0.8}
       >
         <Image
           source={{ uri: item.Poster !== 'N/A' ? item.Poster : 'https://via.placeholder.com/300x450' }}
@@ -53,9 +52,6 @@ export default function TelaFilmes({ navigation }) {
   return (
     <SafeAreaView style={estilos.container}>
 
-      {
-
-      }
       <LinearGradient
         colors={['#1565C0', '#B71C1C']}
         start={{ x: 0, y: 0 }}
@@ -64,10 +60,6 @@ export default function TelaFilmes({ navigation }) {
       >
         <Text style={estilos.headerTitulo}>🕷️ FILMES DO SPIDER-MAN</Text>
       </LinearGradient>
-
-      {
-        
-      }
       {isLoading ? (
         <View style={estilos.loading}>
           <ActivityIndicator size="large" color="#1565C0" />
@@ -104,7 +96,6 @@ const estilos = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     textAlign: 'center',
-    letterSpacing: 1,
   },
   linha: {
     justifyContent: 'space-between',
@@ -112,14 +103,9 @@ const estilos = StyleSheet.create({
   card: {
     width: '48%',
     marginBottom: 14,
-    borderRadius: 12,
+    borderRadius: 10,
     overflow: 'hidden',
-    backgroundColor: '#fff',
-    elevation: 5,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
+    elevation: 4,
   },
   poster: {
     width: '100%',
@@ -127,6 +113,8 @@ const estilos = StyleSheet.create({
   },
   tituloBox: {
     padding: 8,
+    height: 65,
+    justifyContent: 'center',
   },
   tituloFilme: {
     color: '#fff',
@@ -135,10 +123,10 @@ const estilos = StyleSheet.create({
     textAlign: 'center',
   },
   anoFilme: {
-    color: 'rgba(255,255,255,0.8)',
+    color: '#ddd',
     fontSize: 11,
     textAlign: 'center',
-    marginTop: 3,
+    marginTop: 2,
   },
   loading: {
     flex: 1,
